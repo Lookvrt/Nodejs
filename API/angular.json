@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "mini-lms": {
+    "API": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mini-lms:build:production"
+              "buildTarget": "API:build:production"
             },
             "development": {
-              "buildTarget": "mini-lms:build:development"
+              "buildTarget": "API:build:development"
             }
           },
           "defaultConfiguration": "development"
