@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "API": {
+    "repaso": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "API:build:production"
+              "buildTarget": "repaso:build:production"
             },
             "development": {
-              "buildTarget": "API:build:development"
+              "buildTarget": "repaso:build:development"
             }
           },
           "defaultConfiguration": "development"
