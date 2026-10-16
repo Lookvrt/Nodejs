@@ -1,0 +1,31 @@
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Detalle del estudiante</h2>
+        <a class="btn btn-primary" routerLink="/estudiantes">Volver</a>
+    </div>
+
+    <p *ngIf="cargando">Consultando detalles...</p>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+    <div class="table-responsive" *ngIf="!cargando && !error && estudianteDetalle">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Promedio Notas</th>
+                    <th>Estado</th>
+                    <th>Observación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ estudianteDetalle.id }}</td>
+                    <td>{{ estudianteDetalle.promedio | number:'1.1-1' }}</td>
+                    <td>{{ estudianteDetalle.estado }}</td>
+                    <td>{{ estudianteDetalle.observacion }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
